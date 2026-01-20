@@ -39,13 +39,14 @@ Below are three different scores ($z$). Using the figure above, rank the predict
 **Question 1.** Which one has the highest probability of $y=1$? Which one has the lowest? Why?
 
 ```
-# Your answer here
+highest: z=6, lowest: z = 0.2
+the greater the z value, the closer the y value is to 1, monotonically increasing
 ```
 
 **Question 2.** Which pair is *closer together* as probabilities: $s(0.2)$ vs $s(2)$, or $s(2)$ vs $s(6)$? Why?
 
 ```
-# Your answer here
+s(2) and s(6) because the function is squashed
 ```
 
 ### B. "How the sigmoid moves points"
@@ -61,7 +62,7 @@ Use the following small reference table (you may treat these as given; no calcul
 **Question 3.** Suppose two different feature vectors produce scores $z=2$ and $z=4$. In terms of probability, how much did the prediction change? What does this illustrate about "squashing"? (One sentence.)
 
 ```
-# Your answer here
+only changes by around 0.1, the function changes a lot more near z=0
 ```
 
 **Question 3b (preview: temperature).** Later in the course, when we work with language models, we will use a **temperature** parameter $t$ (where $0 < t \le 1$) to control how *sharp* or *confident* a model's predicted probabilities are.
@@ -75,13 +76,13 @@ $$
 **Question:** Suppose the model produces logit $z = 4$. Would using a temperature of $t = 0.1$ make the output probability **higher** or **lower** than without temperature (i.e., compared to $s(4)\approx 0.98$)? Briefly explain.
 
 ```
-# Your answer here
+higher because when you divide by 0.1 the value goes up
 ```
 
 **Question 4.** Now look at the negative logits: $s(-2) \approx 0.12$ and $s(-4) \approx 0.02$. Compare these to the positive cases $s(2) \approx 0.88$ and $s(4) \approx 0.98$. What pattern do you notice? (Hint: what do $s(2)$ and $s(-2)$ sum to?)
 
 ```
-# Your answer here
+s(2) and s(-2) sums to 1, s(-x) = 1-s(x)
 ```
 
 We will now go back to the whole class and discuss group answers for Part 1 in a plenary session.
